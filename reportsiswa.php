@@ -83,7 +83,7 @@ while($row = mysqli_fetch_array($query)) //perulangan untuk menyimpan data
 }
 $html .= "</html>"; //untuk menutup html
 $dompdf->loadHtml($html); //melakukan konververi code html yang ada di variabel $html
-$dompdf->setPaper('A4', 'potrait');// Setting ukuran dan orientasi kertas
+$dompdf->setPaper('A4', 'landscape');// Setting ukuran dan orientasi kertas
 $dompdf->render(); // Rendering dari HTML Ke PDF
 $dompdf->stream('laporan_siswa_pendaftar.pdf');// Melakukan output file Pdf
 ?>
